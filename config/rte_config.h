@@ -55,7 +55,7 @@
 /* mbuf defines */
 #define RTE_MBUF_DEFAULT_MEMPOOL_OPS "ring_mp_mc"
 #define RTE_MBUF_REFCNT_ATOMIC 1
-#define RTE_PKTMBUF_HEADROOM 128
+#define RTE_PKTMBUF_HEADROOM 512
 
 /* ether defines */
 #define RTE_MAX_QUEUES_PER_PORT 1024

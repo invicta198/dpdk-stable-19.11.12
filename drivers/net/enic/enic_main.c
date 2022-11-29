@@ -300,8 +300,10 @@ enic_alloc_rx_queue_mbufs(struct enic *enic, struct vnic_rq *rq)
 	 * drop in the rx handler. Not ideal, but better than returning
 	 * large packets when the user is not expecting them.
 	 */
+	printf("%s\n", "enic_main303");
 	max_rx_pkt_len = enic->rte_dev->data->dev_conf.rxmode.max_rx_pkt_len;
 	rq_buf_len = rte_pktmbuf_data_room_size(rq->mp) - RTE_PKTMBUF_HEADROOM;
+	printf("%u\n", rq_buf_len);
 	if (max_rx_pkt_len < rq_buf_len && !rq->data_queue_enable)
 		rq_buf_len = max_rx_pkt_len;
 	for (i = 0; i < rq->ring.desc_count; i++, rqd++) {

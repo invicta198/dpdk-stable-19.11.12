@@ -622,6 +622,7 @@ main(int argc, char **argv)
 		nb_lcores * MEMPOOL_CACHE_SIZE), 8192U);
 
 	/* create the mbuf pool */
+	printf("%s\n", "l2fwdmain625")
 	l2fwd_pktmbuf_pool = rte_pktmbuf_pool_create("mbuf_pool", nb_mbufs,
 		MEMPOOL_CACHE_SIZE, 0, RTE_MBUF_DEFAULT_BUF_SIZE,
 		rte_socket_id());

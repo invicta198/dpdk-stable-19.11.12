@@ -335,7 +335,9 @@ eth_ark_rx_jumbo(struct ark_rx_queue *queue,
 	/* first buf populated by called */
 	mbuf_prev = mbuf0;
 	segments = 1;
+	printf("%s\n", "arkethdevrx338")
 	data_len = RTE_MIN(meta->pkt_len, RTE_MBUF_DEFAULT_DATAROOM);
+	printf("%u", data_len)
 	remaining = meta->pkt_len - data_len;
 	mbuf0->data_len = data_len;
 
