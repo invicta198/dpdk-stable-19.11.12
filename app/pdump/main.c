@@ -343,7 +343,7 @@ parse_pdump(const char *optarg)
 		pt->ring_size = (uint32_t) v.val;
 	} else
 		pt->ring_size = RING_SIZE;
-
+	
 	/* mbuf_data_size parsing and validation */
 	cnt1 = rte_kvargs_count(kvlist, PDUMP_MSIZE_ARG);
 	if (cnt1 == 1) {
@@ -356,7 +356,7 @@ parse_pdump(const char *optarg)
 		pt->mbuf_data_size = (uint16_t) v.val;
 	} else
 		pt->mbuf_data_size = RTE_MBUF_DEFAULT_BUF_SIZE;
-
+	
 	/* total_num_mbufs parsing and validation */
 	cnt1 = rte_kvargs_count(kvlist, PDUMP_NUM_MBUFS_ARG);
 	if (cnt1 == 1) {
@@ -369,7 +369,7 @@ parse_pdump(const char *optarg)
 		pt->total_num_mbufs = (uint16_t) v.val;
 	} else
 		pt->total_num_mbufs = MBUFS_PER_POOL;
-
+	
 	num_tuples++;
 
 free_kvlist:

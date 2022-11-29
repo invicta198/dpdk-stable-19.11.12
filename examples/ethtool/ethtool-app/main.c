@@ -113,6 +113,7 @@ static void setup_ports(struct app_config *app_cfg, int cnt_ports)
 			dev_info.tx_desc_lim.nb_max + PKTPOOL_EXTRA_SIZE;
 
 		snprintf(str_name, 16, "pkt_pool%i", idx_port);
+		printf("%s\n", "ethtool-app116");
 		ptr_port->pkt_pool = rte_pktmbuf_pool_create(
 			str_name,
 			size_pktpool, PKTPOOL_CACHE,

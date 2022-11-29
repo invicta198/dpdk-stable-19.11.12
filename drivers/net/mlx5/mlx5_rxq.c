@@ -1761,7 +1761,9 @@ mlx5_rxq_new(struct rte_eth_dev *dev, uint16_t idx, uint16_t desc,
 {
 	struct mlx5_priv *priv = dev->data->dev_private;
 	struct mlx5_rxq_ctrl *tmpl;
+	printf("%s\n","mlx5_rxq");
 	unsigned int mb_len = rte_pktmbuf_data_room_size(mp);
+	printf("%u\n", mb_len);
 	unsigned int mprq_stride_nums;
 	unsigned int mprq_stride_size;
 	unsigned int mprq_stride_cap;

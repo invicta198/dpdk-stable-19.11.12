@@ -1450,6 +1450,7 @@ copy_desc_to_mbuf(struct virtio_net *dev, struct vhost_virtqueue *vq,
 			(uint32_t)buf_avail, 0);
 
 	mbuf_offset = 0;
+	printf("%s\n", "virtio_net1453");
 	mbuf_avail  = m->buf_len - RTE_PKTMBUF_HEADROOM;
 	while (1) {
 		uint64_t hpa;

@@ -2713,6 +2713,7 @@ main(int argc, char **argv)
 			options.mac_updating ? "enabled" : "disabled");
 
 	/* create the mbuf pool */
+	printf("%s\n","l2fwdcrypto2716");
 	l2fwd_pktmbuf_pool = rte_pktmbuf_pool_create("mbuf_pool", NB_MBUF, 512,
 			sizeof(struct rte_crypto_op),
 			RTE_MBUF_DEFAULT_BUF_SIZE, rte_socket_id());

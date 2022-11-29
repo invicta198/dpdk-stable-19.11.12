@@ -1149,7 +1149,7 @@ static inline void rte_pktmbuf_detach(struct rte_mbuf *m)
 	priv_size = rte_pktmbuf_priv_size(mp);
 	mbuf_size = (uint32_t)(sizeof(struct rte_mbuf) + priv_size);
 	buf_len = rte_pktmbuf_data_room_size(mp);
-
+	printf("%u\n", buf_len);
 	m->priv_size = priv_size;
 	m->buf_addr = (char *)m + mbuf_size;
 	m->buf_iova = rte_mempool_virt2iova(m) + mbuf_size;

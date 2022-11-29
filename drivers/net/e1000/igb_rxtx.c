@@ -2403,8 +2403,10 @@ eth_igb_rx_init(struct rte_eth_dev *dev)
 		/*
 		 * Configure RX buffer size.
 		 */
+		printf("%s\n", "igb_rxtc2405");
 		buf_size = (uint16_t)(rte_pktmbuf_data_room_size(rxq->mb_pool) -
 			RTE_PKTMBUF_HEADROOM);
+		printf("%u\n", buf_size);
 		if (buf_size >= 1024) {
 			/*
 			 * Configure the BSIZEPACKET field of the SRRCTL
@@ -2693,8 +2695,10 @@ eth_igbvf_rx_init(struct rte_eth_dev *dev)
 		/*
 		 * Configure RX buffer size.
 		 */
+		printf("%s\n", "igb_rxtc2696");
 		buf_size = (uint16_t)(rte_pktmbuf_data_room_size(rxq->mb_pool) -
 			RTE_PKTMBUF_HEADROOM);
+		printf("%u\n", buf_size);
 		if (buf_size >= 1024) {
 			/*
 			 * Configure the BSIZEPACKET field of the SRRCTL
