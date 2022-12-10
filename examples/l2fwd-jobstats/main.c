@@ -773,6 +773,7 @@ main(int argc, char **argv)
 	hz = rte_get_timer_hz();
 
 	/* create the mbuf pool */
+	printf("%s\n","l2fwdjobstats776");
 	l2fwd_pktmbuf_pool =
 		rte_pktmbuf_pool_create("mbuf_pool", NB_MBUF, 32,
 			0, RTE_MBUF_DEFAULT_BUF_SIZE, rte_socket_id());
